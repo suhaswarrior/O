@@ -1,12 +1,12 @@
 public class Main {
- public static void main(String[] args) {
-     BrowserTab tab1 = new BrowserTab();
-     BrowserTab tab2 = new BrowserTab();
-
-     tab1.visitURL("https://www.example1.com");
-     tab1.visitURL("https://www.example2.com");
-     tab2.visitURL("https://www.example3.com");
-     System.out.println();
-     BrowserHistory.getInstance().showHistory(); // Output: example1.com, example2.com, example3.com
- }
+	public static void main(String[] args) {
+		TabWindow s1=TabWindow.getInstance();
+		TabWindow s2=TabWindow.getInstance();
+		s1.addUrl("www.google.com");
+		s2.addUrl("www.facebook.com");
+		TabWindow s3=TabWindow.getInstance();
+		s3.showUrls();
+	}
 }
+
+
